@@ -1,0 +1,7 @@
+<div id="insults">
+  <h1>The Ultimate Insult Creator</h1>
+  <%= form_tag do %>
+    <p id="result"><%= @insult %></p>
+    <%= submit_tag "Generate", class: 'insult-button' %>
+  <% end %>
+</div>
