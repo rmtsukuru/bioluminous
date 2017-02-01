@@ -3,6 +3,9 @@ Bioluminous::Application.routes.draw do
   
   get 'index' => 'home#index'
 
+  # TODO Add new controller for this
+  get "games/gather/" => "home#gather", as: :gather
+
   get 'fos' => 'home#fos'
 
   get "insults" => 'insults#index'

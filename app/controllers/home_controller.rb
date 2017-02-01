@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
   def fos
   end
+
+  def gather
+  end
 end
