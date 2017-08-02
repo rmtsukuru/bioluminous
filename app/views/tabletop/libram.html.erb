@@ -9,7 +9,7 @@
             const rows = data.trim().replace(/í/g, '\'').split('\n');
             $('#le-button').click(function(e) {
                 var i = Math.trunc(Math.random() * rows.length);
-                var text = rows[i];
+                var text = rows[i].match(/^\d{4} (.+)$/)[1] + '.';
                 $('#results').text(text);
             });
         });
