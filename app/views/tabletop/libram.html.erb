@@ -1,0 +1,17 @@
+<div>
+    <p>Click below for a random magical effect.</p>
+    <button id="le-button">Click me</button>
+    <h1 id="results" style="color: purple;"></h1>
+    <script type="text/javascript">
+    $(function() {
+        $.get('/libram.txt', function(data) {
+            const rows = data.trim().replace('í', '\'').split('\n');
+            $('#le-button').click(function(e) {
+                var i = Math.trunc(Math.random() * rows.length);
+                var text = rows[i];
+                $('#results').text(text);
+            });
+        });
+    });
+    </script>
+</div>
