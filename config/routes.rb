@@ -3,7 +3,7 @@ Bioluminous::Application.routes.draw do
   
   get 'index' => 'home#index'
 
-  namespace "games" do
+  scope "games" do
     root to: "games#index", as: :games
     get "gather" => "games#gather", as: :gather
   end
