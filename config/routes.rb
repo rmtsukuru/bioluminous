@@ -5,6 +5,8 @@ Bioluminous::Application.routes.draw do
 
   # TODO Add new controller for this
   get "games/gather/" => "home#gather", as: :gather
+  
+  get "rp/libram" => "tabletop#libram", as: :libram
 
   get 'fos' => 'home#fos'
 
