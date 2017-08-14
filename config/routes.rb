@@ -4,8 +4,8 @@ Bioluminous::Application.routes.draw do
   get 'index' => 'home#index'
 
   namespace "games" do
-    get "/" => "games#index", as: :games
-    get "/gather/" => "games#gather", as: :gather
+    root to: "games#index", as: :games
+    get "gather" => "games#gather", as: :gather
   end
   
   get "rp/libram" => "tabletop#libram", as: :libram
